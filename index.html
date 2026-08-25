@@ -52,18 +52,43 @@
         we could not be more excited to start our greatest chapter yet.</p>
 </section>
 
-<!-- RSVP Section -->
+<!-- Aesthetic RSVP Section -->
 <section id="rsvp" class="content-section">
-    <h2>RSVP</h2>
-    <p>Kindly confirm your attendance by December 1, 2026</p>
-    
-    <div class="rsvp-link-container">
-        <a href="https://forms.gle/e3EnqJx34ojvwKwe6" target="_blank" class="aesthetic-rsvp-btn">
-            CONFIRM YOUR ATTENDANCE HERE
-        </a>
+    <div class="glass-rsvp-card">
+        <div class="card-header">
+            <span class="ornament">❖</span>
+            <h2>R.S.V.P.</h2>
+            <p class="rsvp-subtext">Kindly confirm your attendance by December 1, 2026</p>
+        </div>
+
+        <form id="rsvpForm" action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST" class="aesthetic-form">
+            <div class="input-group">
+                <input type="text" name="name" required placeholder=" ">
+                <label>Your Full Name</label>
+            </div>
+
+            <div class="input-group">
+                <select name="attendance" required>
+                    <option value="" disabled selected hidden></option>
+                    <option value="Joyfully Accepts">Joyfully Accepts</option>
+                    <option value="Regretfully Declines">Regretfully Declines</option>
+                </select>
+                <label class="select-label">Will you be attending?</label>
+            </div>
+
+            <div class="input-group">
+                <input type="number" name="guests" min="1" max="5" required placeholder=" ">
+                <label>Number of Guests</label>
+            </div>
+
+            <button type="submit" class="aesthetic-gold-btn">
+                <span>CONFIRM ATTENDANCE</span>
+            </button>
+        </form>
+
+        <div id="rsvpSuccess" class="success-message" style="display: none;">
+            <p class="thank-you-title">Thank You!</p>
+            <p>Your response has been received. We look forward to celebrating with you!</p>
+        </div>
     </div>
 </section>
-
-    <script src="script.js"></script>
-</body>
-</html>
