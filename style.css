@@ -1,0 +1,119 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #0b1f19; /* Dark Emerald Green */
+    color: #e0e0e0;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+}
+
+/* Navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(11, 31, 25, 0.95);
+    padding: 15px 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+}
+
+.navbar a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
+.navbar a.rsvp-btn {
+    background: #c5a059; /* Muted Gold */
+    color: #0b1f19;
+    padding: 5px 15px;
+    border-radius: 3px;
+    font-weight: 600;
+}
+
+/* Hero Section */
+.hero-section {
+    height: 100vh;
+    background: url('prenup-bg.jpg') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(11, 31, 25, 0.75);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 600px;
+    padding: 20px;
+}
+
+h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 50px;
+    color: #ffffff;
+    margin: 15px 0;
+}
+
+.ampersand {
+    color: #c5a059;
+}
+
+/* Countdown */
+#countdown {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+#countdown div {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(197, 160, 89, 0.4);
+    padding: 10px 15px;
+    border-radius: 5px;
+    min-width: 65px;
+}
+
+#countdown span {
+    font-size: 22px;
+    color: #c5a059;
+    font-weight: bold;
+}
+
+#countdown p {
+    font-size: 10px;
+    letter-spacing: 1px;
+}
+
+/* Music Floating Button */
+#music-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1001;
+    background: #c5a059;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 20px;
+    color: #0b1f19;
+    cursor: pointer;
+    font-weight: bold;
+}

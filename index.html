@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gio & Dane - Wedding Invitation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Audio Player -->
+    <audio id="bg-music" loop>
+        <source src="your-audio-file.mp3" type="audio/mpeg">
+    </audio>
+    <button id="music-btn" onclick="toggleMusic()">🎵 Play Music</button>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <a href="#hero">HOME</a>
+        <a href="#story">OUR STORY</a>
+        <a href="#details">EVENT DETAILS</a>
+        <a href="#gallery">GALLERY</a>
+        <a href="#rsvp" class="rsvp-btn">RSVP</a>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+        <div class="overlay"></div>
+        <div class="hero-content">
+            <p class="sub-title">In honor and gratitude to God who brought us together</p>
+            <h1>Gio <span class="ampersand">&</span> Dane</h1>
+            <p class="event-date">February 7, 2027</p>
+
+            <!-- Countdown Timer -->
+            <div id="countdown">
+                <div><span id="days">00</span><p>DAYS</p></div>
+                <div><span id="hours">00</span><p>HOURS</p></div>
+                <div><span id="minutes">00</span><p>MINS</p></div>
+                <div><span id="seconds">00</span><p>SECS</p></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Story Section -->
+    <section id="story" class="content-section">
+        <h2>Our Love Story</h2>
+<p class="story-text">Our story technically began back in elementary school—she claims she noticed me first, though I was completely oblivious! Years later, a simple "Happy New Year!" message changed everything. What started as a warm holiday greeting quickly turned into effortless conversations, endless shared laughter, and counting down the miles together on every run. From childhood acquaintances to running partners and best friends, we could not be more excited to start our greatest chapter yet.</p>
+</section>
+
+    <!-- RSVP Section -->
+    <section id="rsvp" class="content-section gold-bg">
+        <h2>RSVP</h2>
+        <p>Kindly confirm your attendance by December 1, 2026</p>
+        <!-- Replace src link below with your Google Form embed link -->
+        <iframe src="YOUR_GOOGLE_FORM_EMBED_URL" width="100%" height="500" frameborder="0">Loading…</iframe>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
