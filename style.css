@@ -167,3 +167,129 @@ h1 {
     box-shadow: 0 6px 20px rgba(197, 160, 89, 0.4);
     transform: translateY(-2px);
 }
+
+/* Glassmorphism RSVP Card */
+.glass-rsvp-card {
+    background: rgba(15, 46, 35, 0.45);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(212, 175, 55, 0.25);
+    border-radius: 12px;
+    padding: 50px 35px;
+    max-width: 440px;
+    margin: 40px auto;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.ornament {
+    color: #c5a059;
+    font-size: 18px;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.glass-rsvp-card h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 38px;
+    letter-spacing: 4px;
+    color: #ffffff;
+    margin-bottom: 6px;
+}
+
+.rsvp-subtext {
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #a0b0a8;
+    margin-bottom: 35px;
+}
+
+/* Underline Floating Label Inputs */
+.aesthetic-form {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+
+.input-group {
+    position: relative;
+    text-align: left;
+}
+
+.input-group input,
+.input-group select {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 14px;
+    color: #ffffff;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+    outline: none;
+    transition: border-color 0.3s ease;
+    border-radius: 0;
+}
+
+.input-group select option {
+    background-color: #0b1f19;
+    color: #ffffff;
+}
+
+.input-group label {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.5);
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+/* Floating Label Animation */
+.input-group input:focus ~ label,
+.input-group input:not(:placeholder-shown) ~ label,
+.input-group select:focus ~ label,
+.input-group select:valid ~ label {
+    top: -14px;
+    font-size: 10px;
+    color: #c5a059;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.input-group input:focus,
+.input-group select:focus {
+    border-bottom-color: #c5a059;
+}
+
+/* Premium Gold Button */
+.aesthetic-gold-btn {
+    margin-top: 15px;
+    padding: 16px;
+    background: linear-gradient(135deg, #c5a059 0%, #e6ca85 50%, #c5a059 100%);
+    border: none;
+    border-radius: 4px;
+    color: #0b1f19;
+    font-weight: 600;
+    font-size: 12px;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(197, 160, 89, 0.2);
+}
+
+.aesthetic-gold-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(197, 160, 89, 0.4);
+}
+
+/* Success Card Message */
+.thank-you-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 32px;
+    color: #c5a059;
+    margin-bottom: 10px;
+}
