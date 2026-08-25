@@ -359,3 +359,17 @@ h1 {
         rgba(197, 160, 89, 0)
     );
 }
+
+/* Hero Section Golden Minimal Divider */
+.hero-divider {
+    border: none;
+    height: 1px;
+    width: 120px; /* Adjust length as desired */
+    margin: 15px auto;
+    background: linear-gradient(
+        to right, 
+        rgba(197, 160, 89, 0), 
+        rgba(197, 160, 89, 0.6) 50%, 
+        rgba(197, 160, 89, 0)
+    );
+}
