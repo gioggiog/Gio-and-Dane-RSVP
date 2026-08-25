@@ -1,4 +1,4 @@
-// Target Wedding Date (Year, Month Index 0-11, Day, Hour, Minute)
+// Target Wedding Date
 const targetDate = new Date("January 11, 2027 10:00:00").getTime();
 
 function updateCountdown() {
@@ -22,14 +22,18 @@ function toggleMusic() {
     const btn = document.getElementById("music-btn");
     
     if (music.paused) {
-        music.play();
-        btn.innerText = "⏸ Pause Music";
+        music.play().then(() => {
+            btn.innerText = "⏸ Pause Music";
+        }).catch(error => {
+            console.log("Autoplay failed:", error);
+        });
     } else {
         music.pause();
         btn.innerText = "🎵 Play Music";
     }
 }
 
+// RSVP Form Submission Handling
 const form = document.getElementById('rsvpForm');
 const successMsg = document.getElementById('rsvpSuccess');
 
