@@ -117,3 +117,26 @@ h1 {
     cursor: pointer;
     font-weight: bold;
 }
+
+/* Content Section Formatting */
+.content-section {
+    padding: 60px 20px; /* Adds space top and bottom inside each section */
+    max-width: 800px;
+    margin: 0 auto; /* Centers the text box */
+}
+
+/* Heading Spacing */
+.content-section h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 36px;
+    color: #c5a059; /* Muted Gold */
+    margin-bottom: 25px; /* Adds space directly below headings */
+}
+
+/* Story Paragraph Spacing */
+.story-text {
+    line-height: 1.8;
+    font-size: 15px;
+    margin-bottom: 50px; /* Creates clearance before the next section/RSVP */
+    color: #d0d0d0;
+}
