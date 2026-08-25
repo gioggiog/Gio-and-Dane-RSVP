@@ -29,3 +29,26 @@ function toggleMusic() {
         btn.innerText = "🎵 Play Music";
     }
 }
+
+const form = document.getElementById('rsvpForm');
+const successMsg = document.getElementById('rsvpSuccess');
+
+if (form) {
+    form.addEventListener('submit', async function (e) {
+        e.preventDefault();
+        const data = new FormData(form);
+        
+        const response = await fetch(form.action, {
+            method: 'POST',
+            body: data,
+            headers: { 'Accept': 'application/json' }
+        });
+
+        if (response.ok) {
+            form.style.display = 'none';
+            successMsg.style.display = 'block';
+        } else {
+            alert("Oops! There was a problem submitting your RSVP. Please try again.");
+        }
+    });
+}
