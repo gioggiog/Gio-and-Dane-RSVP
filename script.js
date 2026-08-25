@@ -1,15 +1,21 @@
 // Target Wedding Date
-const targetDate = new Date("February 7, 2027 10:00:00").getTime();
+const targetDate = new Date("February 7, 2027 00:00:00").getTime();
 
 function updateCountdown() {
     const now = new Date().getTime();
     const difference = targetDate - now;
 
     if (difference > 0) {
-        document.getElementById("days").innerText = Math.floor(difference / (1000 * 60 * 60 * 24));
-        document.getElementById("hours").innerText = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        document.getElementById("minutes").innerText = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
-        document.getElementById("seconds").innerText = Math.floor((difference % (1000 * 60)) / 1000);
+        const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+        // Format numbers with leading zeroes (e.g. 05 instead of 5)
+        document.getElementById("days").innerText = days < 10 ? "0" + days : days;
+        document.getElementById("hours").innerText = hours < 10 ? "0" + hours : hours;
+        document.getElementById("minutes").innerText = minutes < 10 ? "0" + minutes : minutes;
+        document.getElementById("seconds").innerText = seconds < 10 ? "0" + seconds : seconds;
     }
 }
 
