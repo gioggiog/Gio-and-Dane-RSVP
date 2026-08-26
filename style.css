@@ -373,3 +373,56 @@ h1 {
         rgba(197, 160, 89, 0)
     );
 }
+
+/* Hero Quick Action Buttons Container */
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+/* Send Message Button (Outline/Subtle Style) */
+.btn-send-message {
+    padding: 10px 22px;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #e0e0e0;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 20px;
+    backdrop-filter: blur(5px);
+    transition: all 0.3s ease;
+}
+
+.btn-send-message:hover {
+    background: rgba(255, 255, 255, 0.18);
+    color: #ffffff;
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+/* RSVP Button (Gold Accent Style) */
+.btn-hero-rsvp {
+    padding: 10px 24px;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #0d2818; /* Dark text for contrast against gold */
+    background: linear-gradient(135deg, #e6ca85 0%, #c5a059 100%);
+    border: 1px solid #c5a059;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(197, 160, 89, 0.3);
+    transition: all 0.3s ease;
+}
+
+.btn-hero-rsvp:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(197, 160, 89, 0.5);
+    background: linear-gradient(135deg, #f0d896 0%, #d4ae63 100%);
+}
