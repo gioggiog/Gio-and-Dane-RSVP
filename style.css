@@ -426,25 +426,3 @@ h1 {
     box-shadow: 0 6px 20px rgba(197, 160, 89, 0.5);
     background: linear-gradient(135deg, #f0d896 0%, #d4ae63 100%);
 }
-
-#story {
-    padding-bottom: 0 !important;
-}
-
-#rsvp {
-    padding-top: 0 !important;
-}
-
-.section-divider {
-    border: none;
-    height: 1px;
-    width: 60%;
-    max-width: 400px;
-    margin: 40px auto !important;
-    background: linear-gradient(
-        to right, 
-        rgba(197, 160, 89, 0), 
-        rgba(197, 160, 89, 0.5) 50%, 
-        rgba(197, 160, 89, 0)
-    );
-}
