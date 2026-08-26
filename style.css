@@ -510,3 +510,35 @@ h1 {
         letter-spacing: 1px !important;
     }
 }
+
+/* Force Navbar Items to Fit and Center on Mobile */
+@media screen and (max-width: 768px) {
+    nav {
+        width: 100% !important;
+        overflow-x: visible !important;
+        padding: 10px 5px !important;
+    }
+
+    nav ul {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+        align-items: center !important;
+        width: 100% !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        gap: 6px 10px !important;
+    }
+
+    nav ul li {
+        display: inline-block !important;
+        margin: 0 !important;
+    }
+
+    nav ul li a {
+        font-size: 10px !important;
+        letter-spacing: 0.8px !important;
+        padding: 4px 6px !important;
+        white-space: nowrap !important;
+    }
+}
