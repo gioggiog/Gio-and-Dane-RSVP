@@ -426,3 +426,71 @@ h1 {
     box-shadow: 0 6px 20px rgba(197, 160, 89, 0.5);
     background: linear-gradient(135deg, #f0d896 0%, #d4ae63 100%);
 }
+
+/* Entourage Section Styles */
+.entourage-group {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.entourage-card {
+    flex: 1;
+    min-width: 280px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(197, 160, 89, 0.25);
+    border-radius: 12px;
+    padding: 24px 20px;
+    text-align: center;
+    backdrop-filter: blur(5px);
+}
+
+.entourage-card.full-width {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.entourage-card h3 {
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: #c5a059;
+    margin-bottom: 14px;
+    text-transform: uppercase;
+}
+
+.entourage-card p {
+    font-size: 14px;
+    color: #e0e0e0;
+    margin: 6px 0;
+    line-height: 1.5;
+}
+
+.entourage-card p small {
+    color: #c5a059;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.role-tag {
+    display: block;
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    color: #c5a059;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.two-column-list, .three-column-list {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.two-column-list > div, .three-column-list > div {
+    flex: 1;
+    min-width: 140px;
+}
