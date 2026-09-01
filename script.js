@@ -82,15 +82,23 @@ if (navToggle && navMenu) {
     });
 }
 
-// Gallery Carousel Initialization
+// Aesthetic 3D Coverflow Carousel Initialization
 const gallerySwiper = new Swiper('.gallery-slider', {
-    slidesPerView: 1,
-    spaceBetween: 20,
-    loop: true,
+    effect: 'coverflow',
     grabCursor: true,
+    centeredSlides: true,
+    slidesPerView: 'auto',
+    loop: true,
     autoplay: {
         delay: 3500,
         disableOnInteraction: false,
+    },
+    coverflowEffect: {
+        rotate: 30,       // Slide angle rotation in degrees
+        stretch: 0,        // Stretch space between slides
+        depth: 100,        // Depth offset (3D perspective depth)
+        modifier: 1,       // Effect multiplier
+        slideShadows: false, // Set to true if you want subtle dark 3D shadows
     },
     pagination: {
         el: '.swiper-pagination',
@@ -99,15 +107,5 @@ const gallerySwiper = new Swiper('.gallery-slider', {
     navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
-    },
-    breakpoints: {
-        640: {
-            slidesPerView: 2,
-            spaceBetween: 20,
-        },
-        1024: {
-            slidesPerView: 3,
-            spaceBetween: 30,
-        },
     },
 });
