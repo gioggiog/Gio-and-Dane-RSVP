@@ -775,3 +775,66 @@ h1 {
         gap: 15px;
     }
 }
+
+/* 1. Subtle Glow & Background Polish */
+#entourage {
+    position: relative;
+    padding: 80px 20px;
+    text-align: center;
+    max-width: 1000px; /* Slightly wider layout */
+    margin: 0 auto;
+    background: radial-gradient(circle at center, rgba(197, 160, 89, 0.08) 0%, rgba(13, 40, 24, 0) 70%);
+}
+
+/* 2. Vertical Divider Between Columns */
+.entourage-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    margin: 40px 0;
+    align-items: start;
+    position: relative;
+}
+
+/* Add a thin vertical gold hairline between left & right columns */
+.entourage-row::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 10%;
+    height: 80%;
+    width: 1px;
+    background: linear-gradient(180deg, transparent, rgba(197, 160, 89, 0.25), transparent);
+    transform: translateX(-50%);
+}
+
+/* Hide the vertical line for full-width sections like Sponsors */
+.entourage-row.full-width::after {
+    display: none;
+}
+
+/* 3. Elegant Section Header Ornament */
+.section-title {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 40px;
+}
+
+.section-title::after {
+    content: '❖'; /* Minimalist diamond accent */
+    display: block;
+    font-size: 10px;
+    color: #c5a059;
+    margin-top: 8px;
+    opacity: 0.7;
+}
+
+/* Remove vertical line on mobile screens */
+@media screen and (max-width: 650px) {
+    .entourage-row::after {
+        display: none;
+    }
+    .entourage-row {
+        gap: 30px;
+    }
+}
