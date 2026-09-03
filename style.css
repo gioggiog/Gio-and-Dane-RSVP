@@ -790,3 +790,28 @@ h1 {
     font-weight: 400 !important;
     color: #ffffff !important;
 }
+
+/* Entourage Section with Custom Botanical Background */
+#entourage {
+    position: relative;
+    padding: 100px 20px;
+    background-image: url('background.jpg');
+    background-position: center bottom; /* Keeps the botanical illustrations anchored nicely */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #0d2818; /* Fallback dark green color while loading */
+    text-align: center;
+    overflow: hidden;
+}
+
+/* Ensure inner container stays 100% transparent over the image */
+#entourage .story-container {
+    position: relative;
+    z-index: 2;
+    max-width: 900px;
+    margin: 0 auto;
+    background: transparent !important;
+    background-color: transparent !important;
+    box-shadow: none !important;
+    border: none !important;
+}
