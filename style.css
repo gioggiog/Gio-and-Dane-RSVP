@@ -775,3 +775,11 @@ h1 {
         gap: 15px;
     }
 }
+
+/* Remove inner container background box */
+#entourage .story-container {
+    background: transparent !important;
+    background-color: transparent !important;
+    box-shadow: none !important;
+    border: none !important;
+}
