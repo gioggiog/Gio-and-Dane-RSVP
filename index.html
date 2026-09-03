@@ -266,36 +266,34 @@
         </div>
 
         <form id="rsvpForm" action="https://api.web3forms.com/submit" method="POST" class="aesthetic-form">
-    
-    <input type="hidden" name="access_key" value="27dbd753-1414-44dd-b429-645eab08beee">
-    
-    <input type="hidden" name="subject" value="New RSVP Submission - Wedding">
+            
+            <input type="hidden" name="access_key" value="27dbd753-1414-44dd-b429-645eab08beee">
+            <input type="hidden" name="subject" value="New RSVP Submission - Gio & Dane Wedding">
+            <input type="hidden" name="from_name" value="Wedding RSVP Portal">
 
-    <input type="hidden" name="from_name" value="Wedding RSVP Portal">
+            <div class="input-group">
+                <input type="text" name="name" required placeholder=" ">
+                <label>Your Full Name</label>
+            </div>
 
-    <div class="input-group">
-        <input type="text" name="name" required placeholder=" ">
-        <label>Your Full Name</label>
-    </div>
+            <div class="input-group">
+                <select name="attendance" required>
+                    <option value="" disabled selected hidden></option>
+                    <option value="Joyfully Accepts">Joyfully Accepts</option>
+                    <option value="Regretfully Declines">Regretfully Declines</option>
+                </select>
+                <label class="select-label">Will you be attending?</label>
+            </div>
 
-    <div class="input-group">
-        <select name="attendance" required>
-            <option value="" disabled selected hidden></option>
-            <option value="Joyfully Accepts">Joyfully Accepts</option>
-            <option value="Regretfully Declines">Regretfully Declines</option>
-        </select>
-        <label class="select-label">Will you be attending?</label>
-    </div>
+            <div class="input-group">
+                <textarea name="message" rows="3" placeholder=" "></textarea>
+                <label>Message for Gio & Dane (Optional)</label>
+            </div>
 
-    <div class="input-group">
-        <input type="number" name="guests" min="1" max="5" required placeholder=" ">
-        <label>Number of Guests</label>
-    </div>
-
-    <button type="submit" class="aesthetic-gold-btn">
-        <span>CONFIRM ATTENDANCE</span>
-    </button>
-</form>
+            <button type="submit" class="aesthetic-gold-btn">
+                <span>CONFIRM ATTENDANCE</span>
+            </button>
+        </form>
 
         <div id="rsvpSuccess" class="success-message" style="display: none;">
             <p class="thank-you-title">Thank You!</p>
