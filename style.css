@@ -775,3 +775,146 @@ h1 {
         gap: 15px;
     }
 }
+
+/* Entourage Section Container */
+#entourage {
+    position: relative;
+    padding: 100px 20px;
+    background-color: #0d2818; /* Solid Dark Emerald Green Background */
+    text-align: center;
+    overflow: hidden;
+}
+
+.story-container {
+    position: relative;
+    z-index: 2; /* Ensures text stays sharply above the foliage accents */
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Base Foliage Styling (SVG Gold/Green Leaves Vector) */
+.foliage-overlay {
+    position: absolute;
+    width: 280px;
+    height: 280px;
+    pointer-events: none;
+    z-index: 1;
+    opacity: 0.85;
+    background-repeat: no-repeat;
+    background-size: contain;
+    /* Embedded pure SVG vector for high-definition gold-outlined leaves */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath fill='%23133822' stroke='%23c5a059' stroke-width='1.2' d='M10,90 Q30,40 80,10 Q50,60 10,90 Z'/%3E%3Cpath fill='none' stroke='%23c5a059' stroke-width='0.8' d='M10,90 Q45,50 80,10 M30,70 Q45,65 50,50 M45,50 Q60,45 65,30'/%3E%3Cpath fill='%231b4d30' stroke='%23c5a059' stroke-width='1' d='M5,60 Q35,20 90,30 Q40,60 5,60 Z'/%3E%3Cpath fill='none' stroke='%23c5a059' stroke-width='0.6' d='M5,60 Q45,40 90,30'/%3E%3C/svg%3E");
+}
+
+/* Corners Positioning */
+.foliage-top-left {
+    top: -20px;
+    left: -20px;
+}
+
+.foliage-top-right {
+    top: -20px;
+    right: -20px;
+    transform: scaleX(-1);
+}
+
+.foliage-bottom-left {
+    bottom: -20px;
+    left: -20px;
+    transform: scaleY(-1);
+}
+
+.foliage-bottom-right {
+    bottom: -20px;
+    right: -20px;
+    transform: scale(-1, -1);
+}
+
+/* Typography & Layouts */
+.entourage-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin: 35px 0;
+    align-items: start;
+}
+
+.entourage-row.full-width {
+    display: block;
+    margin: 35px 0;
+}
+
+.role-title {
+    display: block;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 2.5px;
+    color: #c5a059;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+
+.entourage-block p, 
+.two-column-names p, 
+.three-column-names p {
+    font-size: 15px;
+    color: #f0f0f0;
+    margin: 6px 0;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+}
+
+.two-column-names {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.three-column-names {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+.sub-role {
+    display: block;
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    color: #c5a059;
+    margin-bottom: 6px;
+    text-transform: uppercase;
+}
+
+.sub-role-inline {
+    color: #c5a059;
+    font-size: 11px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-right: 5px;
+}
+
+.gold-divider-line {
+    width: 80px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(197, 160, 89, 0.4), transparent);
+    margin: 35px auto;
+}
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 650px) {
+    .foliage-overlay {
+        width: 160px;
+        height: 160px;
+    }
+
+    .entourage-row {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+    
+    .two-column-names, 
+    .three-column-names {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+}
