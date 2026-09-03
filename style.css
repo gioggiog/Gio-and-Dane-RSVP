@@ -791,37 +791,39 @@ h1 {
     color: #ffffff !important;
 }
 
-/* Full-Width Entourage Section */
+/* Full-Bleed Entourage Section */
 #entourage {
     position: relative;
     width: 100%;
-    min-height: 100vh; /* Optional: matches full viewport height like hero */
-    padding: 100px 4vw; /* Uses percentage-based padding instead of rigid pixels */
-    background-image: url('background.jpg');
-    background-position: center bottom;
-    background-repeat: no-repeat;
-    background-size: cover;
+    min-height: 100vh;
+    padding: 100px 20px;
+    box-sizing: border-box;
+    /* Layered dark green tint overlay + full cover background image */
+    background: linear-gradient(rgba(13, 40, 24, 0.4), rgba(13, 40, 24, 0.4)), 
+                url('background.jpg') center bottom / cover no-repeat;
     background-color: #0d2818;
     text-align: center;
-    box-sizing: border-box;
+    overflow: hidden;
 }
 
-/* Allow the content to stretch wider across desktop screens */
-#entourage .story-container {
+/* Remove fixed max-width restriction on the wrapper */
+#entourage .story-container,
+.story-container {
     position: relative;
     z-index: 2;
-    width: 100%;
-    max-width: 1400px; /* Increased from 900px to allow names to spread out wide */
+    width: 100% !important;
+    max-width: 1200px !important; /* Expands wider across desktop */
     margin: 0 auto;
     background: transparent !important;
+    background-color: transparent !important;
     box-shadow: none !important;
     border: none !important;
 }
 
-/* Widen the grid columns to utilize the extra screen space */
+/* Spread columns out across the screen */
 #entourage .entourage-row {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 80px; /* Adds extra breathing room between groom and bride sides */
+    gap: 60px;
     margin: 40px 0;
 }
