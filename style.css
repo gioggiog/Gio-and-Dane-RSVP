@@ -783,3 +783,10 @@ h1 {
     box-shadow: none !important;
     border: none !important;
 }
+
+/* DELETE OR REMOVE THIS RULE */
+.featured-name {
+    font-size: 18px !important;
+    font-weight: 400 !important;
+    color: #ffffff !important;
+}
