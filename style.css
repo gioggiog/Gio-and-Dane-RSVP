@@ -791,27 +791,37 @@ h1 {
     color: #ffffff !important;
 }
 
-/* Entourage Section with Custom Botanical Background */
+/* Full-Width Entourage Section */
 #entourage {
     position: relative;
-    padding: 100px 20px;
+    width: 100%;
+    min-height: 100vh; /* Optional: matches full viewport height like hero */
+    padding: 100px 4vw; /* Uses percentage-based padding instead of rigid pixels */
     background-image: url('background.jpg');
-    background-position: center bottom; /* Keeps the botanical illustrations anchored nicely */
+    background-position: center bottom;
     background-repeat: no-repeat;
     background-size: cover;
-    background-color: #0d2818; /* Fallback dark green color while loading */
+    background-color: #0d2818;
     text-align: center;
-    overflow: hidden;
+    box-sizing: border-box;
 }
 
-/* Ensure inner container stays 100% transparent over the image */
+/* Allow the content to stretch wider across desktop screens */
 #entourage .story-container {
     position: relative;
     z-index: 2;
-    max-width: 900px;
+    width: 100%;
+    max-width: 1400px; /* Increased from 900px to allow names to spread out wide */
     margin: 0 auto;
     background: transparent !important;
-    background-color: transparent !important;
     box-shadow: none !important;
     border: none !important;
+}
+
+/* Widen the grid columns to utilize the extra screen space */
+#entourage .entourage-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px; /* Adds extra breathing room between groom and bride sides */
+    margin: 40px 0;
 }
