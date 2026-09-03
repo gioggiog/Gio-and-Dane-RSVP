@@ -791,12 +791,20 @@ h1 {
     color: #ffffff !important;
 }
 
-/* Add vertical spacing below section title */
-#entourage .section-title {
-    margin-bottom: 70px !important; /* Increases gap between title and Parents section */
+/* Add vertical spacing below section titles for both sections */
+#entourage .section-title,
+#gallery .section-title {
+    margin-bottom: 70px !important; /* Increases gap below the main heading */
 }
 
-/* Add margin-top to the first entourage row for extra safety */
-#entourage .entourage-row:first-of-type {
+/* Adds extra top padding to the gallery slider element to prevent overlap */
+#gallery .gallery-slider {
     margin-top: 20px;
+}
+
+@media screen and (max-width: 650px) {
+    #entourage .section-title,
+    #gallery .section-title {
+        margin-bottom: 45px !important;
+    }
 }
