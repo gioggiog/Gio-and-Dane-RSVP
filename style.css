@@ -790,3 +790,13 @@ h1 {
     font-weight: 400 !important;
     color: #ffffff !important;
 }
+
+/* Add vertical spacing below section title */
+#entourage .section-title {
+    margin-bottom: 70px !important; /* Increases gap between title and Parents section */
+}
+
+/* Add margin-top to the first entourage row for extra safety */
+#entourage .entourage-row:first-of-type {
+    margin-top: 20px;
+}
