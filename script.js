@@ -110,15 +110,18 @@ const gallerySwiper = new Swiper('.gallery-slider', {
     },
 });
 
-// Set the wedding date target to February 7, 2028
-const weddingDate = new Date("February 7, 2028 00:00:00").getTime();
+// Set the wedding date target using ISO format (reliable across all browsers)
+const weddingDate = new Date("2028-02-07T00:00:00").getTime();
 
 function updateCountdown() {
     const now = new Date().getTime();
     const distance = weddingDate - now;
 
-    if (distance < 0) {
-        document.getElementById("countdown").innerHTML = "TODAY IS THE DAY!";
+    if (isNaN(distance) || distance <= 0) {
+        if (document.getElementById("days")) document.getElementById("days").innerText = "00";
+        if (document.getElementById("hours")) document.getElementById("hours").innerText = "00";
+        if (document.getElementById("minutes")) document.getElementById("minutes").innerText = "00";
+        if (document.getElementById("seconds")) document.getElementById("seconds").innerText = "00";
         return;
     }
 
@@ -127,13 +130,13 @@ function updateCountdown() {
     const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
     const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-    // Update your DOM elements
-    if (document.getElementById("days")) document.getElementById("days").innerText = days;
-    if (document.getElementById("hours")) document.getElementById("hours").innerText = hours;
-    if (document.getElementById("minutes")) document.getElementById("minutes").innerText = minutes;
-    if (document.getElementById("seconds")) document.getElementById("seconds").innerText = seconds;
+    // Update DOM elements with 2-digit padding (e.g., 09 instead of 9)
+    if (document.getElementById("days")) document.getElementById("days").innerText = String(days).padStart(2, '0');
+    if (document.getElementById("hours")) document.getElementById("hours").innerText = String(hours).padStart(2, '0');
+    if (document.getElementById("minutes")) document.getElementById("minutes").innerText = String(minutes).padStart(2, '0');
+    if (document.getElementById("seconds")) document.getElementById("seconds").innerText = String(seconds).padStart(2, '0');
 }
 
-// Run timer every second
-setInterval(updateCountdown, 1000);
+// Run timer immediately then repeat every second
 updateCountdown();
+setInterval(updateCountdown, 1000);
