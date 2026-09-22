@@ -109,3 +109,31 @@ const gallerySwiper = new Swiper('.gallery-slider', {
         prevEl: '.swiper-button-prev',
     },
 });
+
+// Set the wedding date target to February 7, 2028
+const weddingDate = new Date("February 7, 2028 00:00:00").getTime();
+
+function updateCountdown() {
+    const now = new Date().getTime();
+    const distance = weddingDate - now;
+
+    if (distance < 0) {
+        document.getElementById("countdown").innerHTML = "TODAY IS THE DAY!";
+        return;
+    }
+
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    // Update your DOM elements
+    if (document.getElementById("days")) document.getElementById("days").innerText = days;
+    if (document.getElementById("hours")) document.getElementById("hours").innerText = hours;
+    if (document.getElementById("minutes")) document.getElementById("minutes").innerText = minutes;
+    if (document.getElementById("seconds")) document.getElementById("seconds").innerText = seconds;
+}
+
+// Run timer every second
+setInterval(updateCountdown, 1000);
+updateCountdown();
