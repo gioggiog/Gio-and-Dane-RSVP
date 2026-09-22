@@ -1,5 +1,5 @@
 // Target Wedding Date
-const targetDate = new Date("February 7, 2027 00:00:00").getTime();
+const targetDate = new Date("February 7, 2028 00:00:00").getTime();
 
 function updateCountdown() {
     const now = new Date().getTime();
