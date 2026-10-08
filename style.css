@@ -1155,3 +1155,29 @@ h1 {
     border-color: #c5a059 !important;
     box-shadow: 0 2px 10px rgba(197, 160, 89, 0.3);
 }
+
+/* High-Specificity Fix for Location Buttons */
+a.view-location-btn,
+a.view-location-btn:link,
+a.view-location-btn:visited,
+a.view-location-btn:active {
+    display: inline-block !important;
+    font-size: 11px !important;
+    font-weight: 500 !important;
+    letter-spacing: 1px !important;
+    text-transform: uppercase !important;
+    color: #c5a059 !important;
+    text-decoration: none !important;
+    background-color: transparent !important;
+    border: 1px solid rgba(197, 160, 89, 0.4) !important;
+    padding: 6px 12px !important;
+    border-radius: 4px !important;
+    transition: all 0.3s ease !important;
+}
+
+a.view-location-btn:hover {
+    background-color: #c5a059 !important;
+    color: #0b1f19 !important;
+    border-color: #c5a059 !important;
+    box-shadow: 0 2px 10px rgba(197, 160, 89, 0.3) !important;
+}
