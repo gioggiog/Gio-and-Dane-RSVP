@@ -160,7 +160,7 @@ const tableData = {
     },
     7: {
         title: "Groom's Fam&Friends A",
-        guests: [""Ate (Groom)", "Kuya Mikel", "Tintin", Edel", "Edel's GF", "Esoy", "Nash", "Brandon", "Brad's Fiancee"]
+        guests: ["Ate (Groom)", "Kuya Mikel", "Tintin", "Edel", "Edel's GF", "Esoy", "Nash", "Brandon", "Brad's Fiancee"]
     },
     8: {
         title: "Groom's Friends B",
