@@ -1121,3 +1121,32 @@ h1 {
     opacity: 1;
     transform: translateY(0);
 }
+
+/* Timeline Location Row & View Location Button */
+.timeline-location-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 8px;
+}
+
+.view-location-btn {
+    font-size: 11px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #c5a059;
+    text-decoration: none;
+    border: 1px solid rgba(197, 160, 89, 0.4);
+    padding: 4px 10px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.view-location-btn:hover {
+    background: #c5a059;
+    color: #0b1f19;
+    border-color: #c5a059;
+    box-shadow: 0 2px 10px rgba(197, 160, 89, 0.3);
+}
