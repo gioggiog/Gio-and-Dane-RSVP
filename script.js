@@ -136,31 +136,31 @@ function toggleMusic() {
 const tableData = {
     1: {
         title: "Immediate Family",
-        guests: ["Mama (Groom)", "Papa (Groom)", "Ate (Groom)", "Kuya Mikel", "Tintin", "Mama (Bride)", "Papa (Bride)", "Lola"]
+        guests: ["Mama (Groom)", "Papa (Groom)", "Mama (Bride)", "Papa (Bride)", "Lola"]
     },
     2: {
         title: "Principal Sponsors",
-        guests: ["Mr. Montefolka", "Mrs. Montefolka", "Mr. Yap", "Mrs. Yap", "Capt. Bubbles", "Tita Cathy", "Tito JP", "Mi Chona"]
+        guests: ["Mr. Montefolka", "Mrs. Montefolka", "Mr. Yap", "Mrs. Yap", "Capt. Bubbles", "Capt's Partner", "Tita Cathy", "Tito JP", "Tiyo Ben", "Mi Chona"]
     },
     3: {
         title: "Groom's Relatives",
-        guests: ["Tiyo Meo", "Te Gigi", "Tiyo Ben", "Te Cecil", "Kuya Tata", "Kuya Junjun", "Te Jenimmar"]
+        guests: ["Tiyo Meo", "Te Gigi", "Te Cecil", "Kuya Tata", "Kuya Junjun", "Te Jenimmar"]
     },
     4: {
         title: "Bride's Uncles & Aunts",
         guests: ["Auntie Vicky", "Uncle Jun", "Uncle Andoy", "Uncle Edgar", "Auntie BB", "Uncle Lito", "Auntie Sonia", "Auntie Gaya", "Uncle Dodong"]
     },
     5: {
-        title: "Bride's Family",
-        guests: ["Epay", "Khem", "Jrebb", "Angelie", "Bryce", "Ate Yan", "Chanisse", "Chelsea", "Chantal"]
+        title: "Bride's Relatives",
+        guests: ["Epay", "Khem", "Jrebb", "Angelie", "Bryce", "Ate Yan", "Chanisse", "Chelsea", "Chantal", "Loeng & Clark"]
     },
     6: {
-        title: "Wedding Party",
-        guests: ["Jharyd", "Jade", "Kyle", "Carla", "Xavier", "Exekiel", "Jerson"]
+        title: "Groom's Fam&Friends",
+        guests: ["Jharyd", "Jade", "Kyle", "Carla", "Xavier", "Exekiel", "Jerson", "Mark", "Mark's GF"]
     },
     7: {
-        title: "Groom's Friends A",
-        guests: ["Edel", "Edel's GF", "Esoy", "Nash", "Brandon", "Brad's GF", "Mark", "Mark's GF"]
+        title: "Groom's Fam&Friends A",
+        guests: [""Ate (Groom)", "Kuya Mikel", "Tintin", Edel", "Edel's GF", "Esoy", "Nash", "Brandon", "Brad's Fiancee"]
     },
     8: {
         title: "Groom's Friends B",
@@ -172,7 +172,7 @@ const tableData = {
     },
     10: {
         title: "Bride's Friends B",
-        guests: ["Loeng & Clark", "Shania", "Irish", "Hannah", "Kern", "Monet", "Catz", "Ebie", "Sabin", "Krizzanta & Xavi", "Duday", "Timay", "Cooper"]
+        guests: ["Shania", "Irish", "Hannah", "Kern", "Monet", "Catz", "Ebie", "Sabin", "Krizzanta & Xavi", "Duday", "Timay", "Cooper"]
     }
 };
 
