@@ -131,3 +131,78 @@ function toggleMusic() {
         if (btn) btn.innerText = "🎵 Play Music";
     }
 }
+
+// Table Guest List Data
+const tableData = {
+    1: {
+        title: "Immediate Family",
+        guests: ["Mama (Groom)", "Papa (Groom)", "Ate (Groom)", "Kuya Mikel", "Tintin", "Mama (Bride)", "Papa (Bride)", "Lola"]
+    },
+    2: {
+        title: "Principal Sponsors",
+        guests: ["Mr. Montefolka", "Mrs. Montefolka", "Mr. Yap", "Mrs. Yap", "Capt. Bubbles", "Tita Cathy", "Tito JP", "Mi Chona"]
+    },
+    3: {
+        title: "Groom's Relatives",
+        guests: ["Tiyo Meo", "Te Gigi", "Tiyo Ben", "Te Cecil", "Kuya Tata", "Kuya Junjun", "Te Jenimmar"]
+    },
+    4: {
+        title: "Bride's Uncles & Aunts",
+        guests: ["Auntie Vicky", "Uncle Jun", "Uncle Andoy", "Uncle Edgar", "Auntie BB", "Uncle Lito", "Auntie Sonia", "Auntie Gaya", "Uncle Dodong"]
+    },
+    5: {
+        title: "Bride's Family",
+        guests: ["Epay", "Khem", "Jrebb", "Angelie", "Bryce", "Ate Yan", "Chanisse", "Chelsea", "Chantal"]
+    },
+    6: {
+        title: "Wedding Party",
+        guests: ["Jharyd", "Jade", "Kyle", "Carla", "Xavier", "Exekiel", "Jerson"]
+    },
+    7: {
+        title: "Groom's Friends A",
+        guests: ["Edel", "Edel's GF", "Esoy", "Nash", "Brandon", "Brad's GF", "Mark", "Mark's GF"]
+    },
+    8: {
+        title: "Groom's Friends B",
+        guests: ["Helbert", "Ella", "Kent", "Eghan", "Johan", "Edmund", "Joshua", "Vhryl", "Thomas", "Rex", "Scott", "Mikee"]
+    },
+    9: {
+        title: "Bride's Friends A",
+        guests: ["Kuya John2 & Wife", "Kuya Enting & Wife", "BB, BB1, BB2, BB3", "Mico", "Carlo", "Jamjam", "Anson", "Ondong", "Ate MK", "Mommy Nancy"]
+    },
+    10: {
+        title: "Bride's Friends B",
+        guests: ["Loeng & Clark", "Shania", "Irish", "Hannah", "Kern", "Monet", "Catz", "Ebie", "Sabin", "Krizzanta & Xavi", "Duday", "Timay", "Cooper"]
+    }
+};
+
+function openTableModal(tableNum) {
+    const data = tableData[tableNum];
+    if (!data) return;
+
+    document.getElementById("modalTableNumber").innerText = `TABLE ${String(tableNum).padStart(2, '0')}`;
+    document.getElementById("modalTableName").innerText = data.title;
+
+    const listContainer = document.getElementById("modalGuestList");
+    listContainer.innerHTML = "";
+
+    data.guests.forEach((guest, index) => {
+        const li = document.createElement("li");
+        li.innerText = guest;
+        // Stagger list animation delay for each guest name
+        li.style.transitionDelay = `${0.1 + index * 0.04}s`;
+        listContainer.appendChild(li);
+    });
+
+    document.getElementById("tableModal").classList.add("active");
+}
+
+function closeTableModal(event) {
+    if (event.target.id === "tableModal") {
+        document.getElementById("tableModal").classList.remove("active");
+    }
+}
+
+function closeTableModalDirect() {
+    document.getElementById("tableModal").classList.remove("active");
+}
