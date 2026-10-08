@@ -1181,3 +1181,40 @@ a.view-location-btn:hover {
     border-color: #c5a059 !important;
     box-shadow: 0 2px 10px rgba(197, 160, 89, 0.3) !important;
 }
+
+/* Timeline Location Row Layout */
+.timeline-location-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 12px;
+}
+
+/* Force all 5 View Location buttons to be gold, bordered, and uppercase */
+a.view-location-btn,
+a.view-location-btn:link,
+a.view-location-btn:visited,
+a.view-location-btn:active {
+    display: inline-block !important;
+    font-size: 11px !important;
+    font-weight: 500 !important;
+    letter-spacing: 1px !important;
+    text-transform: uppercase !important;
+    color: #c5a059 !important;
+    text-decoration: none !important;
+    background-color: transparent !important;
+    border: 1px solid rgba(197, 160, 89, 0.4) !important;
+    padding: 6px 12px !important;
+    border-radius: 4px !important;
+    transition: all 0.3s ease !important;
+}
+
+/* Gold background fill on hover */
+a.view-location-btn:hover {
+    background-color: #c5a059 !important;
+    color: #0b1f19 !important;
+    border-color: #c5a059 !important;
+    box-shadow: 0 2px 10px rgba(197, 160, 89, 0.3) !important;
+}
