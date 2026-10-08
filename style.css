@@ -1129,24 +1129,29 @@ h1 {
     align-items: center;
     flex-wrap: wrap;
     gap: 10px;
-    margin-top: 8px;
+    margin-top: 12px;
 }
 
-.view-location-btn {
+/* Force links to stay gold whether unvisited, visited, or active */
+.view-location-btn,
+.view-location-btn:link,
+.view-location-btn:visited {
     font-size: 11px;
     letter-spacing: 1px;
     text-transform: uppercase;
-    color: #c5a059;
-    text-decoration: none;
+    color: #c5a059 !important;
+    text-decoration: none !important;
     border: 1px solid rgba(197, 160, 89, 0.4);
-    padding: 4px 10px;
+    padding: 6px 12px;
     border-radius: 4px;
     transition: all 0.3s ease;
+    display: inline-block;
 }
 
-.view-location-btn:hover {
-    background: #c5a059;
-    color: #0b1f19;
-    border-color: #c5a059;
+.view-location-btn:hover,
+.view-location-btn:active {
+    background: #c5a059 !important;
+    color: #0b1f19 !important;
+    border-color: #c5a059 !important;
     box-shadow: 0 2px 10px rgba(197, 160, 89, 0.3);
 }
