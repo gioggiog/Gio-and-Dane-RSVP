@@ -1636,3 +1636,24 @@ html { scroll-padding-top: 64px; }
 @media (max-width: 600px) {
     .timeline-icon-box svg { width: 18px; height: 18px; }
 }
+
+/* Mobile nav: short brand + RSVP inside the hamburger menu */
+@media (max-width: 768px) {
+    .nav-brand {
+        font-size: 26px !important;
+        letter-spacing: 2px !important;
+        color: #e6ca85;
+    }
+
+    .nav-menu li.rsvp-item,
+    .nav-menu li:has(.rsvp-btn) {
+        padding-top: 10px;
+    }
+
+    .nav-menu a.rsvp-btn {
+        display: inline-block;
+        padding: 12px 44px;
+        font-size: 13px;
+        letter-spacing: 2px;
+    }
+}
