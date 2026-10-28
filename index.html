@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gio & Dane - Wedding Invitation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Audio Player -->
+    <audio id="bg-music" loop>
+        <source src="Johnoy Danao - Ikaw at Ako (official music video).mp3" type="audio/mpeg">
+    </audio>
+    <button id="music-btn" onclick="toggleMusic()">🎵 Play Music</button>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <a href="#hero">HOME</a>
+        <a href="#story">OUR STORY</a>
+        <a href="#timeline">EVENT DETAILS</a>
+        <a href="#gallery">GALLERY</a>
+        <a href="#rsvp" class="rsvp-btn">RSVP</a>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+        <div class="overlay"></div>
+        <div class="hero-content">
+            <p class="sub-title">In honor and gratitude to God who brought us together</p>
+            <h1>Gio <span class="ampersand">&</span> Dane</h1>
+
+            <hr style="border: none; height: 1px; width: 120px; margin-top: 8px; margin-bottom: 18px; margin-left: auto; margin-right: auto; display: block; background: linear-gradient(to right, rgba(197, 160, 89, 0), rgba(197, 160, 89, 0.7) 50%, rgba(197, 160, 89, 0));">
+            
+            <p class="event-date">February 7, 2028</p>
+
+            <!-- Countdown Timer -->
+            <div id="countdown">
+                <div><span id="days">00</span><p>DAYS</p></div>
+                <div><span id="hours">00</span><p>HOURS</p></div>
+                <div><span id="minutes">00</span><p>MINS</p></div>
+                <div><span id="seconds">00</span><p>SECS</p></div>
+            </div>
+
+            <div class="hero-buttons">
+    <a href="sms:+639773039294" class="btn-send-message">Send Message</a>
+    <a href="#rsvp" class="btn-hero-rsvp">RSVP</a>
+</div>
+</section>
+
+    <!-- Our Story Section -->
+<section id="story" class="content-section">
+    <div class="story-container">
+        <h2>OUR LOVE STORY</h2>
+
+        <div class="story-stack">
+            <!-- Box 1 -->
+            <div class="story-box">
+                <span class="story-label">HOW WE MET</span>
+                <p>
+                    We were classmates back in elementary school, but our real story sparked when I greeted her on New Year's Day. After chatting for a while, we met up to go jogging together at IL Corso, that's the very first time we saw each other again after all those years.
+                </p>
+            </div>
+
+            <!-- Box 2 -->
+            <div class="story-box">
+                <span class="story-label">THE PROPOSAL</span>
+                <p>
+                    It happened at a serene mountain resort that we had all to ourselves. While playing pickleball, I pretended to get injured. The moment she ran over worried to check on me, I got down on one knee and asked her to marry me.
+                </p>
+            </div>
+
+            <!-- Box 3 -->
+            <div class="story-box">
+                <span class="story-label">OUR STORY</span>
+                <p>
+                    In almost a year of being together, we've packed in endless adventures, like traveling across Siargao, Bohol, Siquijor, Olango Island, and even Vietnam. Rooted in deep mutual respect and love, we're ready for our biggest journey yet.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Minimal Golden Divider -->
+    <hr class="section-divider">
+
+            <!-- Wedding Timeline Section -->
+<section id="timeline" class="content-section">
+    <div class="story-container">
+        <div class="timeline-header">
+            <span class="timeline-sub">DAY SCHEDULE</span>
+            <h2 class="section-title">Wedding Timeline</h2>
+        </div>
+
+        <div class="timeline-wrapper">
+            <!-- Timeline Item 1 -->
+            <div class="timeline-item">
+                <div class="timeline-icon-box">
+                    <span class="icon">👥</span>
+                </div>
+                <div class="timeline-content">
+                    <div class="timeline-time">
+                        <span class="clock-icon">🕒</span> 9:00 AM
+                    </div>
+                    <h3 class="timeline-title">Guest Arrival</h3>
+                    <p class="timeline-desc">Please arrive on-time.</p>
+                    <div class="timeline-location-row">
+                        <div class="timeline-location">
+                            <span class="pin-icon">📍</span> Chapel of San Pedro Calungsod
+                        </div>
+                        <a href="https://maps.app.goo.gl/WBDvc8bTu1yGxUXbA">
+                            View Location &rarr;
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Timeline Item 2 -->
+            <div class="timeline-item">
+                <div class="timeline-icon-box">
+                    <span class="icon">🚗</span>
+                </div>
+                <div class="timeline-content">
+                    <div class="timeline-time">
+                        <span class="clock-icon">🕒</span> 9:30 AM
+                    </div>
+                    <h3 class="timeline-title">Bridal Car Arrival</h3>
+                    <p class="timeline-desc">The Bride arrives at the venue in a beautifully decorated car.</p>
+                    <div class="timeline-location-row">
+                        <div class="timeline-location">
+                            <span class="pin-icon">📍</span> Chapel of San Pedro Calungsod
+                        </div>
+                        <a href="https://maps.app.goo.gl/WBDvc8bTu1yGxUXbA">
+                            View Location &rarr;
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Timeline Item 3 -->
+            <div class="timeline-item">
+                <div class="timeline-icon-box">
+                    <span class="icon">💒</span>
+                </div>
+                <div class="timeline-content">
+                    <div class="timeline-time">
+                        <span class="clock-icon">🕒</span> 10:00 AM
+                    </div>
+                    <h3 class="timeline-title">Wedding Ceremony</h3>
+                    <p class="timeline-desc">The solemn ceremony begins with prayers and vows.</p>
+                    <div class="timeline-location-row">
+                        <div class="timeline-location">
+                            <span class="pin-icon">📍</span> Chapel of San Pedro Calungsod
+                        </div>
+                        <a href="https://maps.app.goo.gl/WBDvc8bTu1yGxUXbA">
+                            View Location &rarr;
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Timeline Item 4 -->
+            <div class="timeline-item">
+                <div class="timeline-icon-box">
+                    <span class="icon">📸</span>
+                </div>
+                <div class="timeline-content">
+                    <div class="timeline-time">
+                        <span class="clock-icon">🕒</span> 11:30 AM
+                    </div>
+                    <h3 class="timeline-title">Photo Session</h3>
+                    <p class="timeline-desc">Group and family photos with the newlyweds.</p>
+                    <div class="timeline-location-row">
+                        <div class="timeline-location">
+                            <span class="pin-icon">📍</span> Chapel of San Pedro Calungsod
+                        </div>
+                        <a href="https://maps.app.goo.gl/WBDvc8bTu1yGxUXbA">
+                            View Location &rarr;
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Timeline Item 5 -->
+            <div class="timeline-item">
+                <div class="timeline-icon-box">
+                    <span class="icon">🥂</span>
+                </div>
+                <div class="timeline-content">
+                    <div class="timeline-time">
+                        <span class="clock-icon">🕒</span> 12:30 PM
+                    </div>
+                    <h3 class="timeline-title">Reception Starts</h3>
+                    <p class="timeline-desc">Join us for lunch, toasts, and celebration!</p>
+                    <div class="timeline-location-row">
+                        <div class="timeline-location">
+                            <span class="pin-icon">📍</span> Golden Peak Hotel Suites
+                        </div>
+                        <a href="https://maps.app.goo.gl/wYh4wPv1tQ9dFJee9" target="_blank" rel="noopener noreferrer" class="view-location-btn">
+                            View Location &rarr;
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+            <!-- Minimal Golden Divider -->
+    <hr class="section-divider">
+
+            <!-- Minimalist Wedding Entourage Section -->
+<section id="entourage" class="content-section">
+    <div class="story-container">
+        <h2 class="section-title">WEDDING ENTOURAGE</h2>
+
+        <!-- Parents -->
+        <div class="entourage-row">
+            <div class="entourage-block">
+                <span class="role-title">PARENTS OF THE GROOM</span>
+                <p>Mr. Jesus Tibon</p>
+                <p>Mrs. Glenda Tibon</p>
+            </div>
+            <div class="entourage-block">
+                <span class="role-title">PARENTS OF THE BRIDE</span>
+                <p>Mr. Joseph Lindayao</p>
+                <p>Mrs. Alma Lindayao</p>
+            </div>
+        </div>
+
+        <div class="gold-divider-line"></div>
+
+        <!-- Principal Sponsors -->
+        <div class="entourage-row full-width">
+            <span class="role-title">PRINCIPAL SPONSORS</span>
+            <div class="two-column-names">
+                <div>
+                    <p>Mr. Gerry Montefolka</p>
+                    <p>Mr. James Yap</p>
+                    <p>Mr. Ruben Tibon</p>
+                </div>
+                <div>
+                    <p>Mrs. Mrs. Montefolka</p>
+                    <p>Mrs. Mrs. Yap</p>
+                    <p>Mrs. Chona Tibon</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="gold-divider-line"></div>
+
+        <!-- Best Man & Maid of Honor -->
+<div class="entourage-row">
+    <div class="entourage-block">
+        <span class="role-title">BEST MAN</span>
+        <p>Jharyd Tibon</p>
+    </div>
+    <div class="entourage-block">
+        <span class="role-title">MAID OF HONOR</span>
+        <p>Steffi Marie Lindayao</p>
+    </div>
+</div>
+
+        <div class="gold-divider-line"></div>
+
+        <!-- Secondary Sponsors -->
+        <div class="entourage-row full-width">
+            <span class="role-title">SECONDARY SPONSORS</span>
+            <div class="three-column-names">
+                <div>
+                    <span class="sub-role">CANDLE</span>
+                    <p>Name</p>
+                </div>
+                <div>
+                    <span class="sub-role">VEIL</span>
+                    <p>Name</p>
+                </div>
+                <div>
+                    <span class="sub-role">CORD</span>
+                    <p>Name</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="gold-divider-line"></div>
+
+        <!-- Groomsmen & Bridesmaids -->
+        <div class="entourage-row">
+            <div class="entourage-block">
+                <span class="role-title">GROOMSMEN</span>
+                <p>Jade Tibon</p>
+                <p>Rob Kyle Tibon</p>
+                <p>Name 3</p>
+                <p>Name 4</p>
+                <p>Name 5</p>
+            </div>
+            <div class="entourage-block">
+                <span class="role-title">BRIDESMAIDS</span>
+                <p>Maryl Tibon</p>
+                <p>Name 2</p>
+                <p>Name 3</p>
+                <p>Name 4</p>
+                <p>Name 5</p>
+            </div>
+        </div>
+
+        <div class="gold-divider-line"></div>
+
+        <!-- Bearers & Flower Girls -->
+        <div class="entourage-row">
+            <div class="entourage-block">
+                <span class="role-title">BEARERS</span>
+                <p><span class="sub-role-inline">RING BEARER:</span> Bryce Damari Lindayao</p>
+                <p><span class="sub-role-inline">COIN BEARER:</span> Name</p>
+                <p><span class="sub-role-inline">BIBLE BEARER:</span> Name</p>
+            </div>
+            <div class="entourage-block">
+                <span class="role-title">FLOWER GIRLS</span>
+                <p>Althea Lagnason</p>
+                <p>Athena Mae Lagnason</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+    <!-- Minimal Golden Divider -->
+    <hr class="section-divider">
+
+            <!-- Table Arrangement Section -->
+<section id="seating-chart" class="content-section">
+    <div class="story-container">
+        <div class="timeline-header">
+            <span class="timeline-sub">SEATING ARRANGEMENT</span>
+            <h2 class="section-title">Table Assignments</h2>
+        </div>
+
+        <!-- Table Grid -->
+        <div class="tables-grid">
+            <button class="table-card" onclick="openTableModal(1)">
+                <span class="table-number">01</span>
+                <h3>Immediate Family</h3>
+            </button>
+            <button class="table-card" onclick="openTableModal(2)">
+                <span class="table-number">02</span>
+                <h3>Principal Sponsors</h3>
+            </button>
+            <button class="table-card" onclick="openTableModal(3)">
+                <span class="table-number">03</span>
+                <h3>Groom's Relatives</h3>
+            </button>
+            <button class="table-card" onclick="openTableModal(4)">
+                <span class="table-number">04</span>
+                <h3>Bride's Uncles & Aunts</h3>
+            </button>
+            <button class="table-card" onclick="openTableModal(5)">
+                <span class="table-number">05</span>
+                <h3>Bride's Family</h3>
+            </button>
+            <button class="table-card" onclick="openTableModal(6)">
+                <span class="table-number">06</span>
+                <h3>Wedding Party</h3>
+            </button>
+            <button class="table-card" onclick="openTableModal(7)">
+                <span class="table-number">07</span>
+                <h3>Groom's Friends A</h3>
+            </button>
+            <button class="table-card" onclick="openTableModal(8)">
+                <span class="table-number">08</span>
+                <h3>Groom's Friends B</h3>
+            </button>
+            <button class="table-card" onclick="openTableModal(9)">
+                <span class="table-number">09</span>
+                <h3>Bride's Friends A</h3>
+            </button>
+            <button class="table-card" onclick="openTableModal(10)">
+                <span class="table-number">10</span>
+                <h3>Bride's Friends B</h3>
+            </button>
+        </div>
+    </div>
+</section>
+
+<!-- Animated Popup Modal -->
+<div id="tableModal" class="table-modal-overlay" onclick="closeTableModal(event)">
+    <div class="table-modal-content">
+        <span class="close-btn" onclick="closeTableModalDirect()">&times;</span>
+        <span id="modalTableNumber" class="modal-sub">TABLE 01</span>
+        <h2 id="modalTableName">Immediate Family</h2>
+        <div class="modal-divider">❖</div>
+        <ul id="modalGuestList" class="guest-list">
+            <!-- Names populated dynamically via JS -->
+        </ul>
+    </div>
+</div>
+
+    <!-- Minimal Golden Divider -->
+    <hr class="section-divider">
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="content-section">
+        <div class="gallery-container">
+            <h2 class="section-title">OUR GALLERY</h2>
+
+            <div class="swiper gallery-slider" aria-label="Photo gallery">
+                <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <figure class="gallery-card">
+                    <img src="Carousel/sample-1.svg" alt="Sample photo 1 (replace with your own)" loading="lazy" width="400" height="500">
+                </figure>
+            </div>
+            <div class="swiper-slide">
+                <figure class="gallery-card">
+                    <img src="Carousel/sample-2.svg" alt="Sample photo 2 (replace with your own)" loading="lazy" width="400" height="500">
+                </figure>
+            </div>
+            <div class="swiper-slide">
+                <figure class="gallery-card">
+                    <img src="Carousel/sample-3.svg" alt="Sample photo 3 (replace with your own)" loading="lazy" width="400" height="500">
+                </figure>
+            </div>
+            <div class="swiper-slide">
+                <figure class="gallery-card">
+                    <img src="Carousel/sample-4.svg" alt="Sample photo 4 (replace with your own)" loading="lazy" width="400" height="500">
+                </figure>
+            </div>
+            <div class="swiper-slide">
+                <figure class="gallery-card">
+                    <img src="Carousel/sample-5.svg" alt="Sample photo 5 (replace with your own)" loading="lazy" width="400" height="500">
+                </figure>
+            </div>
+            <div class="swiper-slide">
+                <figure class="gallery-card">
+                    <img src="Carousel/sample-6.svg" alt="Sample photo 6 (replace with your own)" loading="lazy" width="400" height="500">
+                </figure>
+            </div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev" aria-label="Previous photo"></div>
+                <div class="swiper-button-next" aria-label="Next photo"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Minimal Golden Divider -->
+    <hr class="section-divider">
+
+    <!-- RSVP Section -->
+    <section id="rsvp" class="content-section">
+        <div class="rsvp-card">
+            <div class="rsvp-head">
+                <span class="rsvp-ornament" aria-hidden="true">❖</span>
+                <h2>Will you join us?</h2>
+                <p class="rsvp-deadline">Please reply by <strong>December 15, 2026</strong></p>
+            </div>
+
+            <form id="rsvpForm" class="rsvp-form" action="https://api.web3forms.com/submit" method="POST" novalidate>
+                <input type="hidden" name="access_key" value="27dbd753-1414-44dd-b429-645eab08beee">
+                <input type="hidden" name="subject" value="New RSVP Submission - Gio & Dane Wedding">
+                <input type="hidden" name="from_name" value="Wedding RSVP Portal">
+                <input type="checkbox" name="botcheck" class="rsvp-honeypot" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+                <div class="rsvp-field">
+                    <label for="rsvpName">Full name</label>
+                    <input id="rsvpName" type="text" name="name" required autocomplete="name" placeholder="e.g. Maria Santos">
+                </div>
+
+                <fieldset class="rsvp-field rsvp-choices">
+                    <legend>Can you make it?</legend>
+                    <label class="rsvp-choice">
+                        <input type="radio" name="attendance" value="Joyfully Accepts" required>
+                        <span class="rsvp-choice-body">
+                            <span class="rsvp-choice-title">Joyfully accepts</span>
+                            <span class="rsvp-choice-sub">I'll be there</span>
+                        </span>
+                    </label>
+                    <label class="rsvp-choice">
+                        <input type="radio" name="attendance" value="Regretfully Declines">
+                        <span class="rsvp-choice-body">
+                            <span class="rsvp-choice-title">Regretfully declines</span>
+                            <span class="rsvp-choice-sub">I can't make it</span>
+                        </span>
+                    </label>
+                </fieldset>
+
+                <div class="rsvp-field rsvp-guests" id="guestsField" hidden>
+                    <label for="guestCount">Number of guests</label>
+                    <div class="rsvp-stepper">
+                        <button type="button" class="step-btn" data-step="-1" aria-label="Fewer guests">&minus;</button>
+                        <input id="guestCount" type="number" name="guests" value="1" min="1" max="5" inputmode="numeric" disabled>
+                        <button type="button" class="step-btn" data-step="1" aria-label="More guests">+</button>
+                    </div>
+                    <p class="rsvp-hint">Including yourself. Seats are reserved per invitation.</p>
+                </div>
+
+                <div class="rsvp-field">
+                    <label for="message">Message for Gio &amp; Dane <span class="optional">(optional)</span></label>
+                    <textarea id="message" name="message" rows="3" placeholder="Share a wish, a memory, or a song request"></textarea>
+                </div>
+
+                <p class="rsvp-error" id="rsvpError" role="alert" hidden></p>
+
+                <button type="submit" class="rsvp-submit">
+                    <span class="btn-label">Send my RSVP</span>
+                    <span class="btn-spinner" aria-hidden="true"></span>
+                </button>
+            </form>
+
+            <div id="rsvpSuccess" class="rsvp-success" hidden>
+                <svg class="check" viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="24"/><path d="M15 27l8 8 14-16"/></svg>
+                <h3 id="successTitle">Thank you!</h3>
+                <p id="successText">Your response has been received.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
