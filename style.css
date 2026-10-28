@@ -1657,3 +1657,17 @@ html { scroll-padding-top: 64px; }
         letter-spacing: 2px;
     }
 }
+
+/* G&D monogram in the nav (recolored to champagne gold) */
+.brand-logo {
+    display: block;
+    width: 70px;
+    height: 36px;
+    object-fit: cover;          /* trims the empty space around the monogram */
+    object-position: center;
+    filter: brightness(0) invert(79%) sepia(34%) saturate(445%) hue-rotate(0deg) brightness(102%) contrast(81%);
+}
+
+@media (max-width: 768px) {
+    .nav-brand { display: flex; align-items: center; }
+}
