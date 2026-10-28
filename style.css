@@ -1610,3 +1610,29 @@ html { scroll-padding-top: 64px; }
     stroke-linecap: round;
     stroke-linejoin: round;
 }
+
+/* Timeline gold line icons (replace emojis) */
+.timeline-icon-box { color: #e6ca85; }
+
+.timeline-icon-box svg,
+.mini-icon {
+    fill: none;
+    stroke: currentColor;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+.timeline-icon-box svg { width: 22px; height: 22px; stroke-width: 1.5; }
+
+.mini-icon {
+    width: 14px;
+    height: 14px;
+    stroke-width: 2;
+    flex-shrink: 0;
+    vertical-align: -2px;
+}
+.timeline-time .mini-icon { color: #c5a059; }
+.timeline-location .mini-icon { color: #c5a059; opacity: 0.85; }
+
+@media (max-width: 600px) {
+    .timeline-icon-box svg { width: 18px; height: 18px; }
+}
