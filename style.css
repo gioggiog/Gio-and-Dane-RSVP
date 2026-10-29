@@ -1702,3 +1702,19 @@ html { scroll-padding-top: 64px; }
     .nav-menu li:has(.rsvp-btn) { padding-top: 8px; }
     .nav-menu a.rsvp-btn { padding: 10px 38px; font-size: 12px; }
 }
+
+/* RSVP row inside the mobile menu: lift it off the bottom edge */
+@media (max-width: 768px) {
+    .nav-menu li.rsvp-item {
+        display: flex;
+        justify-content: center;
+        padding: 6px 0 20px;
+    }
+
+    .nav-menu li.rsvp-item a.rsvp-btn {
+        display: block;
+        margin: 0;
+        padding: 10px 38px;
+        line-height: 1.2;
+    }
+}
