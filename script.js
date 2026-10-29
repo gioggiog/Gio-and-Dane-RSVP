@@ -244,7 +244,7 @@ const tableData = {
         guests: ["Mr. Montefolka", "Mrs. Montefolka", "Mr. Yap", "Mrs. Yap", "Capt. Bubbles", "Capt's Partner", "Tita Cathy", "Tito JP", "Tiyo Ben", "Mi Chona"]
     },
     3: {
-        title: "Groom's Relatives",
+        title: "Groom's Uncles & Aunts",
         guests: ["Tiyo Meo", "Te Gigi", "Te Cecil", "Kuya Tata", "Kuya Junjun", "Te Jenimmar"]
     },
     4: {
@@ -252,28 +252,28 @@ const tableData = {
         guests: ["Auntie Vicky", "Uncle Jun", "Uncle Andoy", "Uncle Edgar", "Auntie BB", "Uncle Lito", "Auntie Sonia", "Auntie Gaya", "Uncle Dodong"]
     },
     5: {
-        title: "Bride's Relatives",
-        guests: ["Epay", "Khem", "Jrebb", "Angelie", "Bryce", "Ate Yan", "Chanisse", "Chelsea", "Chantal", "Loeng & Clark"]
+        title: "Bride's Family",
+        guests: ["Epay", "Khem", "Jrebb", "Angelie", "Bryce", "Ate Yan", "Chanisse", "Chelsea", "Chantal", "Loeng"]
     },
     6: {
-        title: "Groom's Fam&Friends",
+        title: "Groom's Family & Friends",
         guests: ["Jharyd", "Jade", "Kyle", "Carla", "Xavier", "Exekiel", "Jerson", "Mark", "Mark's GF"]
     },
     7: {
-        title: "Groom's Fam&Friends A",
+        title: "Groom's Family",
         guests: ["Ate (Groom)", "Kuya Mikel", "Tintin", "Edel", "Edel's GF", "Esoy", "Nash", "Brandon", "Brad's Fiancee"]
     },
     8: {
-        title: "Groom's Friends B",
+        title: "Groom's Friends",
         guests: ["Helbert", "Ella", "Kent", "Eghan", "Johan", "Edmund", "Joshua", "Vhryl", "Thomas", "Rex", "Scott", "Mikee"]
     },
     9: {
-        title: "Bride's Friends A",
+        title: "Bride's Family & Friends",
         guests: ["Kuya John2 & Wife", "Kuya Enting & Wife", "BB, BB1, BB2, BB3", "Mico", "Carlo", "Jamjam", "Anson", "Ondong", "Ate MK", "Mommy Nancy"]
     },
     10: {
-        title: "Bride's Friends B",
-        guests: ["Shania", "Irish", "Hannah", "Kern", "Monet", "Catz", "Ebie", "Sabin", "Krizzanta & Xavi", "Duday", "Timay", "Cooper"]
+        title: "Bride's Friends",
+        guests: ["Shania", "Irish", "Hannah", "Kern", "Monet", "Ebie", "Sabin", "Krizzanta & Xavi", "Duday", "Timay", "Cooper"]
     }
 };
 
