@@ -18,6 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
             ['.attire-palette', 0, 0],
             ['.attire-card', 0.1, 1],
             ['.attire-note', 0, 0],
+            ['.moments-grid', 0, 0],
             ['.entourage-row', 0, 0],
             ['.gold-divider-line', 0, 0],
             ['.tables-grid .table-card', 0.06, 4],
@@ -307,3 +308,62 @@ function closeTableModal(event) {
 function closeTableModalDirect() {
     document.getElementById("tableModal").classList.remove("active");
 }
+
+// Photo viewer for the first-wedding collage
+document.addEventListener('DOMContentLoaded', function () {
+    const grid = document.querySelector('.moments-grid');
+    const box = document.getElementById('lightbox');
+    if (!grid || !box) return;
+
+    const imgs = Array.from(grid.querySelectorAll('img'));
+    const bigImg = box.querySelector('.lb-img');
+    const counter = box.querySelector('.lb-count');
+    let current = 0;
+    let lastFocus = null;
+
+    function show(i) {
+        current = (i + imgs.length) % imgs.length;
+        bigImg.src = imgs[current].currentSrc || imgs[current].src;
+        bigImg.alt = imgs[current].alt;
+        counter.textContent = (current + 1) + ' / ' + imgs.length;
+    }
+    function open(i) {
+        lastFocus = document.activeElement;
+        show(i);
+        box.classList.add('open');
+        box.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+        box.querySelector('.lb-close').focus();
+    }
+    function close() {
+        box.classList.remove('open');
+        box.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+        if (lastFocus) lastFocus.focus();
+    }
+
+    imgs.forEach((img, i) => img.closest('button').addEventListener('click', () => open(i)));
+    box.querySelector('.lb-close').addEventListener('click', close);
+    box.querySelector('.lb-prev').addEventListener('click', () => show(current - 1));
+    box.querySelector('.lb-next').addEventListener('click', () => show(current + 1));
+    box.addEventListener('click', (e) => {
+        if (e.target === box || e.target.classList.contains('lb-stage')) close();
+    });
+
+    document.addEventListener('keydown', (e) => {
+        if (!box.classList.contains('open')) return;
+        if (e.key === 'Escape') close();
+        if (e.key === 'ArrowLeft') show(current - 1);
+        if (e.key === 'ArrowRight') show(current + 1);
+    });
+
+    // Swipe left/right on phones
+    let startX = null;
+    box.addEventListener('touchstart', (e) => { startX = e.touches[0].clientX; }, { passive: true });
+    box.addEventListener('touchend', (e) => {
+        if (startX === null) return;
+        const dx = e.changedTouches[0].clientX - startX;
+        if (Math.abs(dx) > 50) show(current + (dx < 0 ? 1 : -1));
+        startX = null;
+    });
+});
